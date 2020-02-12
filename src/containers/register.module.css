@@ -99,3 +99,17 @@
     background: rgb(102,128,155);
 }
 
+.flat{
+    font-size: 1.2em;
+    font-weight: bold;
+    color: rgb(78,78,78);
+    display: block;
+    position: absolute;
+    margin-top: 3%; 
+    margin-left: 90%;
+
+    border: 0;
+    background: none;
+    box-shadow: none;
+    border-radius: 0px;
+}

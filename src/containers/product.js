@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
 import * as actions from '../actions/userInfo';
+import Header from '../components/Header';
 
 
 class Product extends Component {
@@ -12,8 +13,7 @@ class Product extends Component {
     render() {
         return (
         <div>
-            <h2>Product</h2>
-            <button onClick={this.displayHomePage}>Click Me.</button>
+            <Header></Header>
         </div>)
         ;
     };
