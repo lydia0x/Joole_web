@@ -5,7 +5,7 @@ import {
   Route,
   Link
 } from "react-router-dom";
-import './App.css';
+import './App.module.css';
 
 import Login from '../containers/login';
 import Register from '../containers/register';
@@ -44,6 +44,7 @@ function App() {
   
           {/* A <Switch> looks through its children <Route>s and
               renders the first one that matches the current URL. */}
+              
           <Switch>
             <Route path="/login" component={Login}/>
             <Route path="/register" component={Register}/>
