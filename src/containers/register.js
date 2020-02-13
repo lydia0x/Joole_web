@@ -68,10 +68,17 @@ class Register extends Component {
     });
   }
 
+  goToSignIn = () => {
+    this.props.history.push('/login');
+}
+
 
   render() {
     return (
       <div className={styles.background}>
+
+        <input type='submit' value='Sign in' className={styles.flat} onClick={this.goToSignIn} />
+
         <span>
           <img className={styles.logo} src={jooleLogo} alt="Joole" />
         </span>
@@ -79,7 +86,7 @@ class Register extends Component {
         <br />
 
         <span className={styles.title}>
-          <h2> Building Product Selection Platform </h2>
+          <h3> Building Product Selection Platform </h3>
         </span>
 
         <form className={styles.form} onSubmit={this.submitHandler}>

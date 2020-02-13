@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import styles from './PopUp.module.css';
+import * as actions from '../actions/auth';
 
 export default class PopUp extends Component {
   handleClick = () => {
@@ -8,6 +9,13 @@ export default class PopUp extends Component {
 
   userName = localStorage.getItem("username");
   url_image = localStorage.getItem("image");
+
+
+  logOut = () => {
+    actions.logout();
+  }
+
+
 
   render() {
     return (
@@ -22,13 +30,13 @@ export default class PopUp extends Component {
           <br />
           <br />
           <br />
-            <h2>{this.userName}</h2>
+            <h3>{this.userName}</h3>
             
             <input className={styles.edit_profile}
               type='submit' 
               value=' Edit Profile '
             />
-            <input className={styles.log_out}
+            <input className={styles.log_out} onClick={this.logOut}
               type='submit' 
               value=' Log Out '
             />

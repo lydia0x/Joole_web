@@ -15,7 +15,7 @@ export const authSuccess = (token, username, image) => {
         type: actionTypes.AUTH_SUCCESS,
         token: token,
         username: username,
-        image: image,
+        image: image
     };
 };
 
@@ -77,21 +77,10 @@ export const userLogin = user => {
     };
 };
 
-export const getHomePage = () => {
-    return dispatch => {
-        console.log("------");
-        const token = localStorage.getItem('token');
-        if(token){
-        let url = 'http://localhost:8080/home';
-        axios.get(url, {headers: {"Authorization": "Bearer ".concat(token)}})
-            // .set('Authorization', 'Bearer ' + token)
-            .then(response => {
-                console.log(response);
-            })
-            .catch(err => {
-                dispatch(authFail(err.response.data.error));
-            });
-        }    
+export const setAuthRedirectPath = (path) => {
+    return {
+        type: actionTypes.SET_AUTH_REDIRECT_PATH,
+        path: path
     };
 };
 
@@ -99,18 +88,45 @@ export const getHomePage = () => {
 export const authCheckState = () => {
     return dispatch => {
         const token = localStorage.getItem('token');
+
+        // if (!token) {
+        //     dispatch(logout());
+        // } else {
+        //     const expirationDate = new Date(localStorage.getItem('expirationDate'));
+        //     if (expirationDate <= new Date()) {
+        //         dispatch(logout());
+        //     } else {
+        //         const username = localStorage.getItem('username');
+        //         dispatch(authSuccess(token, username));
+        //         dispatch(checkAuthTimeout((expirationDate.getTime() - new Date().getTime()) / 1000 ));
+        //     }   
+        // }
         if (!token) {
             dispatch(logout());
         } else {
-            const expirationDate = new Date(localStorage.getItem('expirationDate'));
-            if (expirationDate <= new Date()) {
-                dispatch(logout());
-            } else {
-                const username = localStorage.getItem('username');
-                dispatch(authSuccess(token, username));
-                dispatch(checkAuthTimeout((expirationDate.getTime() - new Date().getTime()) / 1000 ));
-            }   
+            const username = localStorage.getItem('username');
+            dispatch(authSuccess(token, username));
         }
     };
 };
 
+
+
+
+export const getHomePage = () => {
+    return dispatch => {
+        console.log("------");
+        const token = localStorage.getItem('token');
+        if (token) {
+            let url = 'http://localhost:8080/home';
+            axios.get(url, { headers: { "Authorization": "Bearer ".concat(token) } })
+                // .set('Authorization', 'Bearer ' + token)
+                .then(response => {
+                    console.log(response);
+                })
+                .catch(err => {
+                    dispatch(authFail(err.response.data.error));
+                });
+        }
+    };
+};

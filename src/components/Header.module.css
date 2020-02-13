@@ -1,0 +1,95 @@
+.background_header{
+    background-image: linear-gradient(0.25turn, white, rgb(125,175,228));
+    width: 100vw;
+    height: 15vh;
+    text-align: center;
+    display: block;
+}
+
+.logo{
+    width: 12%;
+    height: 8%;
+
+    display: block;
+    position: absolute;
+    margin-top: 3%;  
+    margin-left: 6%;
+    /* margin-right: 20%; */
+    /* padding-right: 20rem; */
+}
+
+
+.form{
+    width: 50%;
+    height: auto;
+    text-align: center;
+    display: block;
+    margin-left: 26.5%;
+}
+
+.dropDown{
+    font-size: 14px;
+    height: 4%;
+    background-color: lightgray;
+
+    display: block;
+    position: absolute;
+    margin-left: 5%;
+    margin-top: 4%;
+}
+
+.input_search{
+    font-size: 15px;
+    width: 27%;
+    height: 4%;
+
+    border: 2px solid gray;
+    border-radius: 5px;
+    display: block;
+    position: absolute;
+    margin-left: 15%;
+    margin-top: 4%;
+    background-image: url('https://img.icons8.com/material-rounded/22/000000/search.png');
+    background-repeat: no-repeat;
+    background-position: 97%;
+}
+
+
+
+.text{
+    font-size: 1.6em;
+    font-weight: bold;
+    color: rgb(78,78,78);
+    display: block;
+    position: absolute;
+    margin-top: 4%; 
+    margin-left: 85%;
+}
+
+
+  
+  .btn {
+    text-align: center;
+    display: block;
+    position: absolute;
+    margin-top: 1.5%; 
+    margin-left: 90%;
+  }
+  
+  .image{
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+  }
+  
+  button {
+    border-radius: 10px;
+    background-color: grey;
+    outline: none;
+  }
+  
+  button:hover {
+    background-color: white;
+  }
+  
+  
