@@ -41,7 +41,7 @@ class Login extends Component {
                 <br />
 
                 <span className={styles.title}>
-                    <h2> Building Product Selection Platform </h2>
+                    <h3> Building Product Selection Platform </h3>
                 </span>
 
                 <form className={styles.form} onSubmit={this.submitHandler}>

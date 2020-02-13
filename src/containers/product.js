@@ -3,6 +3,8 @@ import {connect} from 'react-redux';
 import * as actions from '../actions/userInfo';
 import Header from '../components/Header';
 
+import styles from './product.module.css';
+
 
 class Product extends Component {
     

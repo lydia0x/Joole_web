@@ -22,7 +22,7 @@
     display: block;
     position: absolute;
     margin-top: 25%; 
-    margin-left: 35%;
+    margin-left: 32%;
     text-align: center;
     color: rgb(112,112,112);
 }
@@ -39,7 +39,7 @@
 .input_username{
     font-size: 16px;
     width: 35%;
-    height: 3%;
+    height: 4%;
 
     border: 2px solid gray;
     border-radius: 5px;
@@ -54,7 +54,7 @@
 .input_password{
     font-size: 16px;
     width: 35%;
-    height: 3%;
+    height: 4%;
 
     border: 2px solid gray;
     border-radius: 5px;
@@ -70,7 +70,7 @@
 .input_image{
     font-size: 16px;
     width: 35%;
-    height: 3%;
+    height: 4%;
 
     border: 2px solid gray;
     border-radius: 5px;

@@ -4,7 +4,7 @@
     z-index: 1;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.25);
+    background-color: rgb(0, 0, 0, 0.25);
   }
   
   .modal_content {
@@ -13,7 +13,7 @@
     top: 20%;
     left: 30%;
     width: 40%;
-    height: 25%;
+    height: 30%;
     padding: 20px;
     border-radius: 5px;
     border: 2px solid black;
@@ -30,19 +30,19 @@
   }
   
   .edit_profile{
-    width: 20%;
-    height: 2%;
+    width: 22%;
+    height: 12%;
     display: block;
     position: absolute;
-    margin-left: 20%;
+    margin-left: 18%;
   }
 
   .log_out{
-    width: 20%;
-    height: 2%;
+    width: 22%;
+    height: 12%;
     display: block;
     position: absolute;
-    margin-left: 55%;
+    margin-left: 57%;
   }
 
   .image{
@@ -52,5 +52,6 @@
 
     display: block;
     position: absolute;
+    margin-top: 2%;
     margin-left: 40%;
   }

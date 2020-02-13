@@ -21,7 +21,7 @@
     display: block;
     position: absolute;
     margin-top: 25%; 
-    margin-left: 35%;
+    margin-left: 32%;
     text-align: center;
     color: rgb(112,112,112);
 }
@@ -37,19 +37,19 @@
 
 .dropDown{
     font-size: 16px;
-    height: 3.5%;
+    height: 4%;
     background-color: lightgray;
 
     display: block;
     position: absolute;
-    margin-left: 3.5%;
+    margin-left: 3%;
     margin-top: 0;
 }
 
 .input_search{
     font-size: 16px;
-    width: 32%;
-    height: 3%;
+    width: 35%;
+    height: 4%;
 
     border: 2px solid gray;
     border-radius: 5px;

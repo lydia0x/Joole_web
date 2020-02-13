@@ -29,26 +29,26 @@
 
 .dropDown{
     font-size: 14px;
-    height: 3.5%;
+    height: 4%;
     background-color: lightgray;
 
     display: block;
     position: absolute;
-    margin-left: 5.3%;
+    margin-left: 5%;
     margin-top: 4%;
 }
 
 .input_search{
     font-size: 15px;
-    width: 25%;
-    height: 3%;
+    width: 27%;
+    height: 4%;
 
     border: 2px solid gray;
     border-radius: 5px;
     display: block;
     position: absolute;
     margin-left: 15%;
-    margin-top: 3.9%;
+    margin-top: 4%;
     background-image: url('https://img.icons8.com/material-rounded/22/000000/search.png');
     background-repeat: no-repeat;
     background-position: 97%;

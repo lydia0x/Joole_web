@@ -30,7 +30,7 @@ export default class PopUp extends Component {
           <br />
           <br />
           <br />
-            <h2>{this.userName}</h2>
+            <h3>{this.userName}</h3>
             
             <input className={styles.edit_profile}
               type='submit' 
