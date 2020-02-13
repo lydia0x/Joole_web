@@ -16,6 +16,7 @@ class Product extends Component {
         return (
         <div>
             <Header></Header>
+            <div></div>
         </div>)
         ;
     };
