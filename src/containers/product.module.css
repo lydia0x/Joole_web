@@ -105,10 +105,11 @@
 .row_ProductType_total{
     color: rgb(110, 110, 110);
     width: 100% !important;
-    height: 30%;
+    height: 33%;
     border-bottom: 2px solid grey;
     text-align: left;
     padding-left: 5px !important;
+    padding-top: 5px !important;
     margin: auto !important;
     font: 0.8em sans-serif;
 }
@@ -129,9 +130,15 @@
 
 .label{
     padding-left: 2px;
+}
+
+.label_model_year{
+    margin-top: 5px;
+    padding-left: 2px;
     padding-right: 5px;
 }
 
 .input_model_year{
+    margin-top: 2px;
     width: 30%;
 }

@@ -195,7 +195,7 @@ class Product extends Component {
 
                       <Row className={styles.row_ProductType}>
                         <Col className={styles.dispadding} xs={4}>
-                          <label>Model year: </label>
+                          <label className={styles.label_model_year} >Model year: </label>
                         </Col>
                         
                         <Col className={styles.dispadding} xs={8}>
@@ -208,7 +208,7 @@ class Product extends Component {
                             placeholder="0" 
                             // value="0" 
                             onChange={this.onChange_model_year_min}/>
-                          <label className={styles.label}> ── </label>
+                          <label className={styles.label_model_year}> ── </label>
                           <input 
                             className={styles.input_model_year}
                             type="number" 
