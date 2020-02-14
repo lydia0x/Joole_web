@@ -1,7 +1,8 @@
-import React, { Component } from 'react';
+import React, { Component} from 'react';
 import { connect } from 'react-redux';
 import * as actions from '../actions/userInfo';
 import Header from '../components/Header';
+import Slider from '../components/slider';
 
 import styles from './product.module.css';
 import Container from 'react-bootstrap/Container'
@@ -9,7 +10,9 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 
 
+
 class Product extends Component {
+
 
   displayHomePage = () => {
     this.props.getHomePage(localStorage.getItem("token"));
@@ -46,33 +49,33 @@ class Product extends Component {
     this.setState({ invisible_3: !this.state.invisible_3 });
   }
 
-  onChange_useType = event =>{
+  onChange_useType = event => {
     this.setState({ use_type: event.target.value });
   }
 
-  onChange_application = event =>{
-    this.setState({ application: event.target.value});
+  onChange_application = event => {
+    this.setState({ application: event.target.value });
   }
 
-  onChange_mountingLocation = event =>{
-    this.setState({ mounting_location: event.target.value});
+  onChange_mountingLocation = event => {
+    this.setState({ mounting_location: event.target.value });
   }
 
-  onChange_accessories = event =>{
+  onChange_accessories = event => {
     // this.setState({ accessories: event.target.value }
     // , ()=>{console.log(this.state);}
     // );
 
-    this.setState({ accessories: event.target.value});
+    this.setState({ accessories: event.target.value });
   }
 
-  onChange_model_year_min = event =>{
-    this.setState({ model_year_min: event.target.value});
+  onChange_model_year_min = event => {
+    this.setState({ model_year_min: event.target.value });
   }
 
-  onChange_model_year_max = event =>{
-    this.setState({ model_year_max: event.target.value}
-      , ()=>{console.log(this.state);}
+  onChange_model_year_max = event => {
+    this.setState({ model_year_max: event.target.value }
+      , () => { console.log(this.state); }
     );
   }
 
@@ -197,27 +200,27 @@ class Product extends Component {
                         <Col className={styles.dispadding} xs={4}>
                           <label className={styles.label_model_year} >Model year: </label>
                         </Col>
-                        
+
                         <Col className={styles.dispadding} xs={8}>
-                          <input 
+                          <input
                             className={styles.input_model_year}
-                            type="number" 
-                            id="model_year_min" 
-                            name="model_year_min" 
+                            type="number"
+                            id="model_year_min"
+                            name="model_year_min"
                             step="10"
-                            placeholder="0" 
+                            placeholder="0"
                             // value="0" 
-                            onChange={this.onChange_model_year_min}/>
+                            onChange={this.onChange_model_year_min} />
                           <label className={styles.label_model_year}> ── </label>
-                          <input 
+                          <input
                             className={styles.input_model_year}
-                            type="number" 
-                            id="model_year_max" 
-                            name="model_year_max" 
-                            step="10" 
+                            type="number"
+                            id="model_year_max"
+                            name="model_year_max"
+                            step="10"
                             placeholder="2020"
                             // value="2020" 
-                            onChange={this.onChange_model_year_max}/>
+                            onChange={this.onChange_model_year_max} />
                         </Col>
                       </Row>
                     </Container>
@@ -279,7 +282,7 @@ class Product extends Component {
               <Col
                 className={styles.col_right}
                 xs={9}>
-
+                <Slider></Slider>
               </Col>
             </Row>
 
