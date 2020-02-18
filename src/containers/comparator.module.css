@@ -1,0 +1,98 @@
+.containers {
+    width: 100vw !important;
+    height: 85vh;
+    text-align: center;
+    display: block;
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+    max-width: 100vw !important;
+
+    text-align: center;
+}
+
+.row_t{
+    width: 100% !important;
+    height: 100% !important;
+    border: 1px solid grey;
+    text-align: center;
+    padding: 0 !important;
+    margin: auto !important;
+}
+
+
+
+.container_right {
+    width: 100% !important;
+    height: 85vh;
+    text-align: center;
+    display: block;
+    padding: 0 !important;
+    max-width: 100% !important;
+
+    max-height: 85vh;
+    overflow-y: auto;
+}
+
+.row1_r{
+    width: 100% !important;
+    height: 7%;
+    text-align: center;
+    padding: 2% !important;
+    margin: auto !important;
+    /* border-bottom: 2px solid grey; */
+}
+
+
+
+.row2_r{
+    color: rgb(110, 110, 110);
+    width: 100% !important;
+    height: 4%;
+    text-align: center;
+    padding: 0 !important;
+    margin: auto !important;
+}
+
+.container_row2_r {
+    width: 100% !important;
+    height: 85vh;
+    text-align: center;
+    display: block;
+    padding: 0 !important;
+    max-width: 100% !important;
+
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 20px;
+
+}
+
+.fan_div{
+    border: 2px solid grey;
+}
+
+.fan_image{
+    padding: 20px;
+    height: 15rem;
+    width: 18rem;
+}
+
+.fan_class1{
+    color: rgb(35, 80, 134);
+}
+
+.fan_class2{
+    background-color: rgb(242,242,242);
+    color: black;
+}
+
+.fan_class3{
+    color: red;
+}
+
+
+.compare_row{
+    display: block;
+    
+    margin-bottom: 5%;
+}
