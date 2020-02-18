@@ -20,7 +20,9 @@ class Login extends Component {
 
     submitHandler = (event) => {
         event.preventDefault();
+        
         this.props.userLogin(this.state);
+        // console.log(this.props.error);
     }
 
     goToSignUp = () => {
@@ -49,6 +51,7 @@ class Login extends Component {
                         name='username'
                         placeholder='Username or Email'
                         onChange={this.inputChangedHandler}
+                        required
                     />
                     <br />
 
@@ -57,6 +60,7 @@ class Login extends Component {
                         name='password'
                         placeholder='Password'
                         onChange={this.inputChangedHandler}
+                        required
                     />
                     <br />
 

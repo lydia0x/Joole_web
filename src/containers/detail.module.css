@@ -1,0 +1,107 @@
+.containers {
+    width: 100vw !important;
+    height: 85vh;
+    text-align: center;
+    display: block;
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+    max-width: 100vw !important;
+
+    text-align: center;
+}
+
+.row_t{
+    width: 100% !important;
+    height: 100% !important;
+    border: 1px solid grey;
+    text-align: center;
+    padding: 0 !important;
+    margin: auto !important;
+}
+
+
+
+.container_right {
+    width: 100% !important;
+    height: 85vh;
+    text-align: center;
+    display: block;
+    padding: 0 !important;
+    max-width: 100% !important;
+
+    max-height: 85vh;
+    overflow-y: auto;
+}
+
+.row1_r{
+    width: 100% !important;
+    height: 7%;
+    text-align: center;
+    padding: 2% !important;
+    margin: auto !important;
+    /* border-bottom: 2px solid grey; */
+}
+
+
+
+.row2_r{
+    color: rgb(110, 110, 110);
+    width: 100% !important;
+    text-align: center;
+    padding: 0 !important;
+    margin: auto !important;
+}
+
+.container_row2_r {
+    width: 100% !important;
+    height: 85vh;
+    text-align: center;
+    display: block;
+    padding: 0 !important;
+    max-width: 100% !important;
+
+}
+
+    .tab_button{
+        background-color: rgb(242,242,242);
+        padding: 5px !important;
+    }
+
+    .fan_div{
+        display: block;
+        text-align: center;
+        margin-top: 15px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 60%;
+        border: 2px solid grey;
+    }
+
+    .title{
+        text-align: left;
+        font: 1.8em sans-serif;
+        font-weight: bolder;
+        color:  rgb(35, 80, 134);
+        padding-top: 15px;
+        padding-left: 20px;
+    }
+
+    .sub_title{
+        text-align: left;
+        font: 1em sans-serif;
+        font-weight: bolder;
+        padding-top: 15px;
+        padding-left: 20px;
+    }
+
+    .fan_image{
+        padding: 20px;
+        height: 15rem;
+        width: 18rem;
+    }
+
+    .documentation_image{
+        padding: 20px;
+        width: 39rem;
+        height: auto;
+    }

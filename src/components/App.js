@@ -58,7 +58,7 @@ class App extends Component {
     return (
       <Router>
         <div>
-          <nav>
+          {/* <nav>
             <ul>
               <li>
                 <Link to="/dashboard">Dashboard</Link>
@@ -79,7 +79,7 @@ class App extends Component {
                 <Link to="/comparator">Comparator</Link>
               </li>
             </ul>
-          </nav>
+          </nav> */}
 
           {routes}
 

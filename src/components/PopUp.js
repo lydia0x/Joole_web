@@ -35,6 +35,7 @@ export default class PopUp extends Component {
             <input className={styles.edit_profile}
               type='submit' 
               value=' Edit Profile '
+              disabled= 'true'
             />
             <input className={styles.log_out} onClick={this.logOut}
               type='submit' 

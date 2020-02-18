@@ -18,3 +18,7 @@ export const AUTH_FAIL = 'AUTH_FAIL';
 export const AUTH_LOGOUT = 'AUTH_LOGOUT';
 
 export const SET_AUTH_REDIRECT_PATH = 'SET_AUTH_REDIRECT_PATH';
+
+export const SET_FAN_INFO = 'SET_FAN_INFO';
+export const SET_FAN_ARR = 'SET_FAN_ARR';
+export const SET_FAN_DETAIL = 'SET_FAN_DETAIL';

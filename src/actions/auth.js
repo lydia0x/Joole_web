@@ -1,5 +1,6 @@
-import axios from 'axios';
+// import axios from 'axios';
 
+import axios from '../axios';
 import * as actionTypes from './actionTypes';
 
 
@@ -46,7 +47,7 @@ export const checkAuthTimeout = (expirationTime) => {
 
 export const userRegister = user => {
     return dispatch => {
-        let url = 'http://localhost:8080/register';
+        let url = '/register';
         axios.post(url, user)
             .then(response => {
                 console.log(response);
@@ -59,7 +60,7 @@ export const userRegister = user => {
 
 export const userLogin = user => {
     return dispatch => {
-        let url = 'http://localhost:8080/authenticate';
+        let url = '/authenticate';
         axios.post(url, user)
             .then(response => {
                 console.log(response.data.token);
@@ -83,6 +84,29 @@ export const setAuthRedirectPath = (path) => {
         path: path
     };
 };
+
+export const setFansInfo = (fans) => {
+    return {
+        type: actionTypes.SET_FAN_INFO,
+        fans: fans
+    };
+};
+
+export const setFansArr = (fanArr) => {
+    return {
+        type: actionTypes.SET_FAN_ARR,
+        fanArr: fanArr
+    };
+
+}
+
+export const setSelectedFan = (selectedFan) => {
+    return {
+        type: actionTypes.SET_FAN_DETAIL,
+        selectedFan: selectedFan
+    };
+
+}
 
 
 export const authCheckState = () => {
@@ -118,7 +142,7 @@ export const getHomePage = () => {
         console.log("------");
         const token = localStorage.getItem('token');
         if (token) {
-            let url = 'http://localhost:8080/home';
+            let url = '/home';
             axios.get(url, { headers: { "Authorization": "Bearer ".concat(token) } })
                 // .set('Authorization', 'Bearer ' + token)
                 .then(response => {
@@ -128,5 +152,23 @@ export const getHomePage = () => {
                     dispatch(authFail(err.response.data.error));
                 });
         }
+    };
+};
+
+export const getAllFans = () => {
+    return dispatch => {
+        console.log("====================================");
+        const token = localStorage.getItem('token');
+        if (token) {
+        let url = '/getAllFans';
+        axios.get(url, { headers: { "Authorization": "Bearer ".concat(token) } })
+            .then(response => {
+                console.log(response);
+                dispatch(setFansInfo(response.data));
+            })
+            // .catch(err => {
+            //     dispatch(authFail(err.response.data.error));
+            // });
+        }    
     };
 };

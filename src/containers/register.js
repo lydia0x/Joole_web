@@ -11,38 +11,9 @@ class Register extends Component {
     username: "",
     password: "",
     image: "",
-    isSignup: true
-  }
+    isSignup: true,
 
-  checkValidity(value, rules) {
-    let isValid = true;
-    if (!rules) {
-      return true;
-    }
-
-    if (rules.required) {
-      isValid = value.trim() !== '' && isValid;
-    }
-
-    if (rules.minLength) {
-      isValid = value.length >= rules.minLength && isValid
-    }
-
-    if (rules.maxLength) {
-      isValid = value.length <= rules.maxLength && isValid
-    }
-
-    if (rules.isEmail) {
-      const pattern = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
-      isValid = pattern.test(value) && isValid
-    }
-
-    if (rules.isNumeric) {
-      const pattern = /^\d+$/;
-      isValid = pattern.test(value) && isValid
-    }
-
-    return isValid;
+    // submitting: true
   }
 
   inputChangedHandler = (event) => {
@@ -58,6 +29,7 @@ class Register extends Component {
       password: this.state.password,
       image: this.state.image
     };
+
     event.preventDefault();
     this.props.userRegister(users);
   }
@@ -95,6 +67,7 @@ class Register extends Component {
             name='username'
             placeholder='Username or Email'
             onChange={this.inputChangedHandler}
+            required
           /><br />
 
 
@@ -103,6 +76,7 @@ class Register extends Component {
             name='password'
             placeholder='Password'
             onChange={this.inputChangedHandler}
+            required
           /><br />
 
 
@@ -110,10 +84,12 @@ class Register extends Component {
             name='image'
             placeholder='Image (URL)'
             onChange={this.inputChangedHandler}
+            required
           /><br />
 
           <input className={styles.input_submit}
             type='submit'
+            // disabled={this.state.submitting}
           />
 
         </form>
@@ -139,49 +115,3 @@ const mapDispatchToProps = dispatch => {
 
 export default connect(mapStateToProps, mapDispatchToProps)(Register);
 
-
-// import React, { Component } from 'react';
-// import jooleLogo from '../assets/logo.png';
-
-// class Register extends Component {
-
-//   state = {
-//     username: "",
-//     password: "",
-//     image: ""
-//   }
-
-//   render() {
-//     return (
-//       <form onSubmit={this.handleSubmit}>
-//         <span>
-//           <image src={jooleLogo} alt="Joole" />
-//         </span>  
-//         <h1>Register</h1>
-
-//         <label>Username</label>
-//         <input
-//           name='username'
-//           placeholder='Username'
-//         /><br />
-
-//         <label>Password</label>
-//         <input
-//           type='password'
-//           name='password'
-//           placeholder='Password'
-//         /><br />
-
-//         <label>Image</label>
-//         <input
-//           name='image'
-//           placeholder='Image (URL)'
-//         /><br />
-
-//         <input type='submit' />
-//       </form>
-//     )
-//   }
-// }
-
-// export default Register;
